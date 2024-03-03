@@ -1,0 +1,177 @@
+/* Updated CSS Styles */
+
+img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Ensure the image is displayed as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 10px; /* Add rounded corners to the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+
+/* Call to Action Section */
+.cta-section {
+  background-color: #f2f2f2;
+  padding: 40px;
+}
+
+.cta-content {
+  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.cta-text {
+  flex-basis: 50%;
+  padding-right: 20px;
+}
+
+.cta-content h2 {
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cta-content p {
+  font-size: 16px;
+  color: #666;
+  padding-bottom: 10px;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  border: 2px solid #4c34a2;
+  width: 300px;
+  max-height: 40px;
+  color: #4c34a2;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4c34a2;
+  color: #fff;
+}
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-box {
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+textarea {
+  height: 300px;
+  resize: none;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  position: relative;
+  background-color: #3c45c3;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #4f5acf;
+}
+
+.submit-button-text {
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.submit-button:disabled {
+  background-color: #4c34a2;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submit-button--loading .submit-button-text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.submit-button--loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 10px); /* Adjusted position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .text-box {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+  .cta-button {
+    width: 80%;
+  }
+}
